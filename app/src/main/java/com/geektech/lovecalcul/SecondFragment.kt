@@ -7,7 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import com.geektech.lovecalcul.databinding.FragmentSecondBinding
 import com.geektech.lovecalcul.model.LoveModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class SecondFragment : Fragment() {
     private lateinit var binding: FragmentSecondBinding
 
@@ -26,8 +28,8 @@ onGet()
         }
     private fun onGet(){
         val loveModel:LoveModel=arguments?.getSerializable("key") as LoveModel
-        binding.firstName.text=loveModel.fname
-        binding.secondName.text=loveModel.sname
+        binding.firstName.text=loveModel.firstName
+        binding.secondName.text=loveModel.secondName
         binding.percent.text=loveModel.percentage
         binding.result.text=loveModel.result
     }

@@ -1,11 +1,19 @@
 package com.geektech.lovecalcul.model
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+import com.google.gson.annotations.SerializedName
 import java.io.Serializable
 
+ @Entity(tableName = "love_table")
 data class LoveModel(
-    val fname:String,
-    val sname:String,
+     @SerializedName("fname")
+    val firstName:String,
+     @SerializedName("sname")
+    val secondName:String,
     val percentage:String,
     val  result:String,
+     @PrimaryKey(autoGenerate = true)
+    var id:Int?=0
+     ):Serializable
 
-):Serializable

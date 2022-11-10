@@ -15,4 +15,14 @@
         android:name="com.geektech.lovecalcul.SecondFragment"
         android:label="fragment_second"
         tools:layout="@layout/fragment_second" />
+    <fragment
+        android:id="@+id/onBoardingPage3Fragment"
+        android:name="com.geektech.lovecalcul.onBoard.OnBoardingPage3Fragment"
+        android:label="fragment_on_boarding_page3"
+        tools:layout="@layout/fragment_on_boarding_page3" />
+    <fragment
+        android:id="@+id/onBoardingFragmentPage4Fragment"
+        android:name="com.geektech.lovecalcul.OnBoardingFragmentPage4Fragment"
+        android:label="fragment_on_boarding_page4"
+        tools:layout="@layout/fragment_on_boarding_page4" />
 </navigation>

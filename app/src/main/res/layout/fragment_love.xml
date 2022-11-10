@@ -50,4 +50,32 @@
         app:layout_constraintStart_toStartOf="@id/editSname"
         app:layout_constraintTop_toBottomOf="@id/editSname"/>
 
+    <Button
+        android:id="@+id/historyBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="44dp"
+        android:background="@color/blue"
+        android:gravity="center"
+        android:text="history"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/requestBtn"
+        app:layout_constraintStart_toStartOf="@id/requestBtn"
+        app:layout_constraintTop_toBottomOf="@id/requestBtn"/>
+
+
+
+
+
+
+
+
+
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

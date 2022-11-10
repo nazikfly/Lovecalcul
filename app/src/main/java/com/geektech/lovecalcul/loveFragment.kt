@@ -7,13 +7,18 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.geektech.lovecalcul.databinding.FragmentLoveBinding
+import com.geektech.lovecalcul.model.LoveApi
 import com.geektech.lovecalcul.model.LoveModel
+import com.google.android.datatransport.runtime.dagger.Module
+import dagger.hilt.android.AndroidEntryPoint
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-
-class loveFragment : Fragment() {
-
+import javax.inject.Inject
+@AndroidEntryPoint
+class loveFragment  : Fragment() {
+  @Inject
+  lateinit var api:LoveApi
     lateinit var binding: FragmentLoveBinding
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -32,7 +37,7 @@ class loveFragment : Fragment() {
     private fun initClickers() {
         with(binding) {
             requestBtn.setOnClickListener {
-                App.api.calculate(editFname.text.toString(), editSname.text.toString())
+                api.calculate(editFname.text.toString(), editSname.text.toString())
                     .enqueue(object : Callback<LoveModel> {
                         override fun onResponse(
                             call: Call<LoveModel>, response: Response<LoveModel>
@@ -41,7 +46,6 @@ class loveFragment : Fragment() {
                            var bundle = Bundle()
                             bundle.putSerializable("key",loveModel)
                             findNavController().navigate(R.id.secondFragment,bundle)
-
                         }
                         override fun onFailure(call: Call<LoveModel>, t: Throwable) {
 

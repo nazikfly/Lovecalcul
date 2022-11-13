@@ -23,7 +23,10 @@ class Repository @Inject constructor(private val api: LoveApi, private val dao:L
         })
         return liveLoveModel
     }
-    /*fun insert(loveModel: LoveModel){
+     fun insert(loveModel: LoveModel){
         dao.insert(loveModel)
-    }*/
+    }
 }
+
+
+

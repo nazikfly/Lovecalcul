@@ -9,7 +9,7 @@ import com.geektech.lovecalcul.model.LoveModel
 @Dao
 interface LoveDao {
 
-    @Insert suspend fun insert(loveModel: LoveModel)
+    @Insert  fun insert(loveModel: LoveModel)
 
     @Query("SELECT * FROM love_table")
     fun getLove():LiveData<List<LoveModel>>

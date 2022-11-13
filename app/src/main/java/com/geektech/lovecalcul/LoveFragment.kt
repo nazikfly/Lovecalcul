@@ -16,7 +16,7 @@ import retrofit2.Callback
 import retrofit2.Response
 import javax.inject.Inject
 @AndroidEntryPoint
-class loveFragment  : Fragment() {
+class LoveFragment  : Fragment() {
   @Inject
   lateinit var api:LoveApi
     lateinit var binding: FragmentLoveBinding
